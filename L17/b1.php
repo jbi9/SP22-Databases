@@ -15,7 +15,9 @@
 		//tags too, which would add border lines, center the values, etc.
 	    	echo $row["label"]." ".$row["yval"]."<br>";
             }
-        } 
+        }else{
+	    print "no database";
+	}
 
         //close the connection opened by open.php since we no longer need access to dbase
         $conn->close();
