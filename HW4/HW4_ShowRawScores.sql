@@ -1,3 +1,4 @@
+-- Joanna Bi jbi9 
 -- ShowRawScores.sql
 -- Shows Raw Scores for a student specified by sid 
 
@@ -13,10 +14,8 @@ BEGIN
       	WHERE SID = id;
 
 	SELECT A.AName, R.Score
-	FROM HW4_Assignment AS A LEFT OUTER JOIN (SELECT AName, Score FROM HW4_RawScore WHERE SID = '8888') AS R
+	FROM HW4_Assignment AS A LEFT OUTER JOIN (SELECT AName, Score FROM HW4_RawScore WHERE SID = id) AS R
 	ON A.AName = R.AName;
-   ELSE
-     SELECT NULL;
    END IF;
 END; //
 

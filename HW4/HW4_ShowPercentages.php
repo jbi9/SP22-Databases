@@ -1,3 +1,4 @@
+//Joanna Bi jbi9
 <head><title>Showing Percentages</title></head>
 <body>
 <?php
@@ -11,7 +12,7 @@
     if (!empty($id)) {
         echo "<h2>Percentages</h2><br>";
         if ($result = $conn->query("CALL ShowPercentages('".$id."');")) {
-            if ($result == NULL) {
+            if ($result ->num_rows > 0) {
                 echo "<table border=\"2px solid black\">";
                 echo "<tr><td>sid</td><td>lname</td><td>fname</td><td>section</td>td>courseAvg</td></tr>";
                 foreach($result as $row){
